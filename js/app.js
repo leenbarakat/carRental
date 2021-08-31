@@ -46,7 +46,7 @@ Cars.prototype.render = function () {
     let tdEl = document.createElement('td')
     trEl.appendChild(tdEl)
     let img = document.createElement('img')
-    img.src = `IMG/${this.carModel}.jpg`
+    img.src = `img/${this.carModel}.jpg`
     tdEl.appendChild(img)
 
     let tdEl1 = document.createElement('td')
@@ -77,11 +77,6 @@ function submitHandler(event) {
 
 }
 
-function randomPrice() {
-    let min = Math.ceil(1000);
-    let max = Math.floor(10000);
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
 
 function saveToLocalStorage() {
     let data = JSON.stringify(Array)
